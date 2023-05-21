@@ -119,6 +119,7 @@ public class Main {
         for (int yearOfVizit = 0; yearOfVizit <= endOfPeriod; yearOfVizit = yearOfVizit + cometsVizit) {
             if (yearOfVizit >= beginningOfPeriod && yearOfVizit <= endOfPeriod) {
                 System.out.println(yearOfVizit);
+
             }
         }
     }
