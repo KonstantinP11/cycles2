@@ -12,8 +12,7 @@ public class Main {
         task6();
         task7();
         //     task8();
-        //           getDayNumberOld();
-    }
+        }
 
     public static void task1() {
         System.out.println("задача 1");
