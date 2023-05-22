@@ -1,7 +1,3 @@
-import java.text.ParseException;
-import java.util.Calendar;
-import java.util.Date;
-
 public class Main {
     public static void main(String[] args) {
         task1();
@@ -18,11 +14,12 @@ public class Main {
         System.out.println("задача 1");
         int contribution = 15000;
         int total = 0;
-        int i = 0;
-        while (total <= 2_459_000) {
-            i = i + 1;
+        int month = 0;
+        int moneyGoal = 2_459_000;
+        while (total < moneyGoal) {
+            month++;
             total = total + contribution;
-            System.out.println("Месяц " + i + " сумма накоплений равна " + total + " рублей");
+            System.out.println("Месяц " + month + " сумма накоплений равна " + total + " рублей");
         }
     }
 
@@ -30,12 +27,12 @@ public class Main {
         System.out.println("задача 2");
         int i = 0;
         while (i < 10) {
-            i = i + 1;
+            i++;
             System.out.print(i + " ");
         }
         System.out.println();
         i = 10;
-        for (; i > 0; i = i - 1) {
+        for (; i > 0; i--) {
             System.out.print(i + " ");
         }
         System.out.println();
@@ -56,34 +53,35 @@ public class Main {
 
     public static void task4() {
         System.out.println("задача 4");
+        int moneyGoal = 12_000_000;
         int contribution = 15000;
         double percentMonth = 0.07;
         double total = 0;
         int month = 0;
-        while (total <= 12_000_000) {
+        while (total < moneyGoal) {
             month++;
             total = total + contribution;
             total = total + total * percentMonth;
+            System.out.println("Месяц " + month + " сумма накоплений равна " + total + " рублей");
         }
-        System.out.println("Месяц " + month + " сумма накоплений равна " + total + " рублей");
-
     }
 
     public static void task5() {
         System.out.println("задача 5");
+        int moneyGoal = 12_000_000;
         int contribution = 15000;
         double percentMonth = 0.07;
         double total = 0;
-        int Month = 0;
-        while (total <= 12_000_000) {
-            Month++;
+        int month = 0;
+        while (total <= moneyGoal) {
+            month++;
             total = total + contribution;
             total = total + total * percentMonth;
-            if (Month % 6 == 0) {
-                System.out.println("Месяц " + Month + " сумма накоплений равна " + total + " рублей");
+            if (month % 6 == 0) {
+                System.out.println("Месяц " + month + " сумма накоплений равна " + total + " рублей");
             }
         }
-        System.out.println("Месяц " + Month + " сумма накоплений равна " + total + " рублей");
+        System.out.println("Месяц " + month + " сумма накоплений равна " + total + " рублей");
     }
 
     public static void task6() {
@@ -117,7 +115,7 @@ public class Main {
         int beginningOfPeriod = 1823;
         int endOfPeriod = 2123;
         for (int yearOfVizit = 0; yearOfVizit <= endOfPeriod; yearOfVizit = yearOfVizit + cometsVizit) {
-            if (yearOfVizit >= beginningOfPeriod && yearOfVizit <= endOfPeriod) {
+            if (yearOfVizit >= beginningOfPeriod) {
                 System.out.println(yearOfVizit);
 
             }
